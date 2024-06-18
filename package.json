@@ -1,0 +1,29 @@
+{
+  "name": "time-gauge",
+  "version": "0.0.1",
+  "description": "A Bangle.js app to help gauge time",
+  "main": "app.js",
+  "repository": {
+    "url": "https://github.com/jgumoes/TimeGauge"
+  },
+  "scripts": {
+    "build": "gulp build",
+    "send-to-espruino-console": "gulp send-to-espruino-console",
+    "espruino-console": "gulp espruino-console",
+    "lint": "npx eslint src/*"
+  },
+  "author": "Jack Gumoes",
+  "license": "MIT",
+  "dependencies": {
+    "espruino": "^0.1",
+    "gulp": "^4.0",
+    "js-yaml": "^4.0",
+    "lodash": "^4.17"
+  },
+  "devDependencies": {
+    "@eslint/js": "^9.5.0",
+    "eslint": "^9.5.0",
+    "eslint-plugin-import": "^2.29.1",
+    "globals": "^15.6.0"
+  }
+}

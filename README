@@ -1,0 +1,7 @@
+# Time Gauge
+
+A bangle.js app to help gauge time. Every time you read the time, it saves that time and tells you how long has passed between each reading.
+
+## Uploading
+
+Open the [bangle web ide](https://www.espruino.com/ide/#), and open src/timegauge.app.js (or just copy-paste from github).

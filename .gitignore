@@ -1,3 +1,2 @@
-app.js
-clock.js
-timeList.js
+node_modules
+dist
