@@ -7,23 +7,26 @@
     "url": "https://github.com/jgumoes/TimeGauge"
   },
   "scripts": {
-    "build": "gulp build",
+    "build": "gulp bundle",
     "send-to-espruino-console": "gulp send-to-espruino-console",
     "espruino-console": "gulp espruino-console",
-    "lint": "npx eslint src/*"
+    "lint": "npx eslint src/*",
+    "testLint": "node ./rules/bangleCustomLintingRules.test.js"
   },
   "author": "Jack Gumoes",
   "license": "MIT",
   "dependencies": {
-    "espruino": "^0.1",
-    "gulp": "^4.0",
-    "js-yaml": "^4.0",
-    "lodash": "^4.17"
+    "espruino": "^0.1"
   },
   "devDependencies": {
     "@eslint/js": "^9.5.0",
+    "browserify": "^3.46.1",
     "eslint": "^9.5.0",
-    "eslint-plugin-import": "^2.29.1",
-    "globals": "^15.6.0"
+    "globals": "^15.6.0",
+    "gulp": "^5.0.0",
+    "gulp-browserify": "^0.5.1",
+    "gulp-uglify": "^3.0.2",
+    "uglify-js": "^3.18.0",
+    "vinyl-source-stream": "^2.0.0"
   }
 }

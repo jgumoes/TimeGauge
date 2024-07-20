@@ -1,8 +1,8 @@
 // import globals from "globals";
-import pluginJs from "@eslint/js";
+const pluginJs = require("@eslint/js");
+const {banglePlugin} = require("./tools/rules/bangleCustomLintingRules");
 
-
-export default [
+module.exports = [
   {files: ["**/*.js"], languageOptions: {sourceType: "commonjs"}},
   {languageOptions:
     {
@@ -170,4 +170,16 @@ export default [
     }
   },
   pluginJs.configs.recommended,
+  {
+    rules: {
+      "no-unused-vars": ["error", { "args": "none" }],
+      "semi": ["error", "always"]
+    },
+  },
+  {
+    plugins: {"bangle": banglePlugin},
+    rules: {
+      "bangle/derefence-local-requires": "error"
+    }
+  }
 ];
