@@ -1,9 +1,15 @@
 // import globals from "globals";
 const pluginJs = require("@eslint/js");
-const {banglePlugin} = require("./tools/rules/bangleCustomLintingRules");
+const banglePlugin = require("./tools/rules/bangleCustomLintingRules");
 
 module.exports = [
-  {files: ["**/*.js"], languageOptions: {sourceType: "commonjs"}},
+  {
+    files: ["**/*.js"],
+    languageOptions: {sourceType: "commonjs"}
+  },
+  {
+    ignores: ["**/eslint.config.js", "**/tools/rules/"],
+  },
   {languageOptions:
     {
       globals: {
